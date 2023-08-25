@@ -1,0 +1,26 @@
+this 2 libraries are useful
+
+"@react-native-firebase/app": "^18.3.1",
+    "@react-native-firebase/firestore": "^18.3.1",
+
+
+to register user firestore().collection("users").add(to generate automatic id's)
+
+
+to register user firestore().collection("users").set(you can add doc id's)
+
+
+
+//you can generate userid with the help of uuid
+
+to register user firestore().collection("users").doc(userId).set({
+    name:name,
+    email:email,
+    password:password,
+    mobile:mobile,
+    userId:userId,
+}).then(res=>
+{
+    console.log("user created)
+}).catch(error=>
+console.log('error))
